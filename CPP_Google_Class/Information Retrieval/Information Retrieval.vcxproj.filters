@@ -33,5 +33,18 @@
     <Text Include="Texts\The Luck of Thirteen Wanderings and Flight through Montenegro and Serbia by Gordon et al.txt">
       <Filter>Texts</Filter>
     </Text>
+    <Text Include="Texts\Stop-words.txt">
+      <Filter>Texts</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stop-Words.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -68,7 +68,14 @@
     <Text Include="Texts\Greece and the Allies 1914-1922 by G F Abbott.txt" />
     <Text Include="Texts\My Diary in Serbia April 1 1915-Nov 1 1915 by Monica M Stanley.txt" />
     <Text Include="Texts\Serbia in Light and Darkness by Nikolaj Velimirovic.txt" />
+    <Text Include="Texts\Stop-words.txt" />
     <Text Include="Texts\The Luck of Thirteen Wanderings and Flight through Montenegro and Serbia by Gordon et al.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stop-Words.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
