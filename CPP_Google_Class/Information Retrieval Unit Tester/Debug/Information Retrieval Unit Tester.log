@@ -1,8 +1,6 @@
-﻿Compilación iniciada a las 1/29/2014 9:55:33 AM.
+﻿Compilación iniciada a las 1/29/2014 12:53:35 PM.
      1>Proyecto "C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Information Retrieval Unit Tester\Information Retrieval Unit Tester.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /I"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Information Retrieval" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Information Retrieval Unit Tester.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt stdafx.cpp
-         stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /I"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Information Retrieval" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Information Retrieval Unit Tester.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt "UT_Stop-Words.cpp"
          UT_Stop-Words.cpp
      1>c:\users\fernando\documents\visual studio 2013\projects\cpp_google_class\information retrieval unit tester\ut_stop-words.cpp(19): warning C4018: '<' : no coinciden signed/unsigned
@@ -14,4 +12,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:05.16
+Tiempo transcurrido 00:00:01.79

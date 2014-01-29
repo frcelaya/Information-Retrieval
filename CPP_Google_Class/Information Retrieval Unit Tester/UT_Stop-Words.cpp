@@ -17,7 +17,7 @@ namespace InformationRetrievalUnitTester
 
       bool are_equal = true;
       for (int i = 0; i < stop_words_v1.size(); i++) {
-        if (stop_words_v1[i] != stop_words_v2[2]) {
+        if (stop_words_v1[i] != stop_words_v2[i]) {
           are_equal = false;
         }
       }

@@ -21,6 +21,7 @@ vector<string> Create_StopWords_Vector() {
   }
   else {
     cout << "Unable to open file";
+    return { "Unable to open file" };
   }
 
   return stopwords_v;
