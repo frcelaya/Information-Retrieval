@@ -12,7 +12,7 @@ vector<string> Create_StopWords_Vector() {
   string line;
   vector<string> stopwords_v;
 
-  ifstream myfile("Texts/Stop-words.txt");
+  ifstream myfile("Stop-words.txt");
   if (myfile.is_open()) {
     while (getline(myfile, line)) {
       stopwords_v.push_back(line);

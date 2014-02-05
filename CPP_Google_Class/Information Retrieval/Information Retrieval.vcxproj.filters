@@ -49,7 +49,7 @@
     <ClInclude Include="Texts.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Get_Texts_Paths.h">
+    <ClInclude Include="token_data.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
