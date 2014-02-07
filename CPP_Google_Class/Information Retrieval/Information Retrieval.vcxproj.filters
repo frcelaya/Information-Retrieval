@@ -36,6 +36,9 @@
     <Text Include="Texts\Stop-words.txt">
       <Filter>Texts</Filter>
     </Text>
+    <Text Include="Texts\List.txt">
+      <Filter>Texts</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -49,7 +52,7 @@
     <ClInclude Include="Texts.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="token_data.h">
+    <ClInclude Include="Token_Data.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

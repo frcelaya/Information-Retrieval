@@ -11,10 +11,12 @@
 #include <sstream>
 #include <algorithm>
 #include "Stop-Words.h"
+#include "Token_Data.h"
 #include <windows.h>
 
 
 typedef map<string, int> MStrInt;
+typedef map<string, map<int, Token_Data>> PostingList;
 
 
 bool Is_Bad_Word(string s);
@@ -23,6 +25,7 @@ bool Starts_With(string s, string t);
 void Strip(string &);
 vector<MStrInt> Create_Text_Map();
 vector<string> Get_Files_In_List(string path);
+map<int, string> Create_DocIDs_M();
 
 
 using namespace std;
@@ -71,6 +74,76 @@ vector<MStrInt> Create_Text_Map() {
 }
 
 
+PostingList Create_Posting_List() {
+  unsigned int line_count;
+  string line, word;
+  PostingList pl;
+  PostingList::iterator pl_it;
+  map<int, Token_Data>::iterator td_it;
+  vector<string> stop_words_v = Create_StopWords_Vector();
+  vector<string> texts_paths_v = Get_Files_In_List("Texts/List.txt");
+
+
+  for (unsigned int i = 0; i < texts_paths_v.size(); i++) {
+    cout << "Starting map for " << texts_paths_v[i] << endl;
+    ifstream myfile(texts_paths_v[i]);
+    if (myfile.is_open()) {
+      line_count = 0;
+      while (getline(myfile, line)) {
+        line_count++;
+        stringstream ss(line);
+        while (ss.good()) {
+          ss >> word;
+          if (!Is_Bad_Word(word)){
+            Strip(word);
+            transform(word.begin(), word.end(), word.begin(), ::tolower);
+            if (!Is_Stop_Word(stop_words_v, word)) {
+              pl_it = pl.find(word);
+              if (pl_it != pl.end()) {
+                td_it = pl_it->second.find(i);
+                if (td_it != pl_it->second.end()) {
+                  pl_it->second[i].increment_freq();
+                  pl_it->second[i].push_back_line(line_count);
+                }
+                else {
+                  pl_it->second[i] = Token_Data(1, { line_count });
+                }
+              }
+              else {
+                Token_Data tk = Token_Data(1, { line_count });
+                map<int, Token_Data> m;
+                m[i] = tk;
+                pl[word] = m;
+              }
+            }
+          }
+        }
+      }
+      myfile.close();
+    }
+    /*else {
+    cout << "Unable to open file";
+    MStrInt error_map;
+    error_map.insert(std::pair<string, int>("Unable to open file " + *texts_paths_it, -1));
+    text_maps_v.push_back(error_map);
+    }*/
+  }
+
+  return pl;
+}
+
+
+map<int, string> Create_DocIDs_M() {
+  map<int, string> docIDs;
+  vector<string> texts_paths_v = Get_Files_In_List("Texts/List.txt");
+
+  for (unsigned int i=0; i < texts_paths_v.size(); i++) {
+    docIDs[i] = texts_paths_v[i];
+  }
+
+    return docIDs;
+}
+
 bool Is_Bad_Word(string s){
   bool bad_word = false;
 
@@ -79,13 +152,12 @@ bool Is_Bad_Word(string s){
   else if (s[0] == '-' && (s[1] >= 48 && s[1] <= 57))               { bad_word = true; }
   else if (Starts_With(s, "http"))                                  { bad_word = true; }
 
-  for (int i = 0; i < s.size(); i++) {
+  for (unsigned int i = 0; i < s.size(); i++) {
     if (s[i] < -1 || s[i] > 255) {
       bad_word = true;
       break;
     }
   }
-
 
   return bad_word;
 }
@@ -111,15 +183,8 @@ void Strip(string &s) {
 bool Starts_With(string s, string t) {
   bool b = false;
 
-
-
-  if (s.empty() || t.empty()) {
-    (s == t) ? b = true : b = false;
-  }
-  else if (s.compare(0, t.length(), t) == 0)
-  {
-    b = true;
-  }
+  if (s.empty() || t.empty()) { (s == t) ? b = true : b = false; }
+  else if (s.compare(0, t.length(), t) == 0) { b = true; }
 
   return b;
 }

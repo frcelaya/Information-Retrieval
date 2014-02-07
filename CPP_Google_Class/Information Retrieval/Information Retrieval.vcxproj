@@ -66,6 +66,7 @@
   <ItemGroup>
     <Text Include="Texts\Four Weeks in the Trenches The War Story of a Violinist by Fritz Kreisler.txt" />
     <Text Include="Texts\Greece and the Allies 1914-1922 by G F Abbott.txt" />
+    <Text Include="Texts\List.txt" />
     <Text Include="Texts\My Diary in Serbia April 1 1915-Nov 1 1915 by Monica M Stanley.txt" />
     <Text Include="Texts\Serbia in Light and Darkness by Nikolaj Velimirovic.txt" />
     <Text Include="Texts\Stop-words.txt" />
@@ -77,7 +78,7 @@
   <ItemGroup>
     <ClInclude Include="Stop-Words.h" />
     <ClInclude Include="Texts.h" />
-    <ClInclude Include="token_data.h" />
+    <ClInclude Include="Token_Data.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

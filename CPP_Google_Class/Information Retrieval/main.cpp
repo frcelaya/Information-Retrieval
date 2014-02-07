@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
 #include "Texts.h"
-#include "token_data.h"
 
 using namespace std;
 
@@ -58,6 +57,27 @@ int main(int argc, char *argv[]) {
     cout << otrotoken.lines[i] << " ";
   cout << endl << endl;
   */
+
+  ofstream f("Texts/PostingList.txt");
+  map<int, string> docIDs_v = Create_DocIDs_M();
+  map<int, Token_Data>::iterator td_it;
+  PostingList test = Create_Posting_List();
+  PostingList::iterator pl_it = test.begin();
+
+  cout << "Printing posting list" << endl;
+  for (pl_it; pl_it != test.end(); ++pl_it) {
+    td_it = pl_it->second.begin();
+    for (td_it; td_it != pl_it->second.end(); ++td_it) {
+      f << pl_it->first << " ";
+      f << "at DocID " << td_it->first << " freq= " << td_it->second.get_freq() << " at lines ";
+      vector<unsigned int> lines = td_it->second.get_lines();
+      for (unsigned int i = 0; i < lines.size(); i++) {
+        f << lines[i] << ", ";
+      }
+      f << endl;
+    }
+  }
+  f.close();
 
   cin.sync();
   cout << "Presione una tecla para salir...";

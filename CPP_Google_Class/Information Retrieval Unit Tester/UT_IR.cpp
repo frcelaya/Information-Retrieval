@@ -2,7 +2,7 @@
 #include "CppUnitTest.h"
 #include "Stop-Words.h"
 #include "Texts.h"
-#include "token_data.h"
+#include "Token_Data.h"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -20,7 +20,7 @@ namespace InformationRetrievalUnitTester
       Assert::AreEqual(stop_words_v1.size(), stop_words_v2.size());
 
       bool are_equal = true;
-      for (int i = 0; i < stop_words_v1.size(); i++) {
+      for (unsigned int i = 0; i < stop_words_v1.size(); i++) {
         if (stop_words_v1[i] != stop_words_v2[i]) {
           are_equal = false;
         }
@@ -79,6 +79,7 @@ namespace InformationRetrievalUnitTester
     }
   };
 
+  /*
   TEST_CLASS(Token_Data_Tester)
   {
   public:
@@ -97,4 +98,5 @@ namespace InformationRetrievalUnitTester
       Assert::AreEqual(false, (td.get_docID() == -1), L"Error when testing negative docID.");
     }
   };
+  */
 }

@@ -1,17 +1,15 @@
-﻿Compilación iniciada a las 2/5/2014 12:54:42 PM.
-     1>Proyecto "C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Information Retrieval Unit Tester\Information Retrieval Unit Tester.vcxproj" en el nodo 3 (Build destinos).
+﻿Compilación iniciada a las 2/7/2014 11:36:44 AM.
+     1>Proyecto "C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Information Retrieval Unit Tester\Information Retrieval Unit Tester.vcxproj" en el nodo 3 (Build destinos).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /I"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Information Retrieval" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Information Retrieval Unit Tester.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt UT_IR.cpp
          UT_IR.cpp
-     1>c:\users\fernando\documents\visual studio 2013\projects\cpp_google_class\information retrieval\texts.h(82): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\fernando\documents\visual studio 2013\projects\cpp_google_class\information retrieval unit tester\ut_ir.cpp(23): warning C4018: '<' : no coinciden signed/unsigned
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.lib" /MACHINE:X86 /DLL Debug\stdafx.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.lib" /MACHINE:X86 /DLL Debug\stdafx.obj
          Debug\UT_IR.obj
-            Creando biblioteca C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.lib y objeto C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.exp
-         Information Retrieval Unit Tester.vcxproj -> C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.dll
-     1>Compilación del proyecto terminada "C:\Users\Fernando\Documents\Visual Studio 2013\Projects\CPP_Google_Class\Information Retrieval Unit Tester\Information Retrieval Unit Tester.vcxproj" (Build destinos).
+            Creando biblioteca C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.lib y objeto C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.exp
+         Information Retrieval Unit Tester.vcxproj -> C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Debug\Information Retrieval Unit Tester.dll
+     1>Compilación del proyecto terminada "C:\Users\Fernando\documents\visual studio 2013\Projects\CPP_Google_Class\Information Retrieval Unit Tester\Information Retrieval Unit Tester.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.59
+Tiempo transcurrido 00:00:03.24
